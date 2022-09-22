@@ -1,0 +1,127 @@
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    content: "width=device-width, initial-scale=1.0";
+}
+
+
+
+.title {
+    margin-bottom: 50px;
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 15%;
+    z-index: +2;
+}
+
+.display { 
+    content: "width=device-width, initial-scale=1.0";
+    margin-top: 100px;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    z-index: +2;
+}
+
+.hide {
+    display: none;
+}
+
+.container {
+    margin-top: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%;
+    max-width: 300px;
+    content: "width=device-width, initial-scale=1.0";
+    z-index: +2;
+}
+
+.tile {
+    background-color: #0055ff;
+    border: 1px solid black;
+    min-width: 100px;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    cursor: pointer;
+    z-index: +2;
+}
+
+.playerX {
+    color: #ff0080;
+}
+
+.playerO {
+    color: #00ff00;
+    
+}
+
+.controls {
+    z-index: +2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.controls button {
+    z-index: +2;
+    color: #6600cc;
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    font-size: 20px;
+    margin-left: 1em;
+    cursor: pointer;
+}
+
+.restart {
+    background-color: #498AFB;
+    z-index: +2;
+}
+
+#reset {
+    background-color: #ffffff;
+    z-index: +2;
+}
+
+
+body{
+    overflow: hidden;
+    height: 100vh;
+    background: #000;
+    z-index: -2;
+    animation-fill-mode: backwards
+}
+
+span{
+    position: absolute;
+    pointer-events: none;
+    background: #fff;
+    animation: animate 5s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        transform: scale(0) translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1) translateY(-500%) rotate(360deg);
+    }
+}
